@@ -22,7 +22,7 @@ const TheTeam = () => {
   ];
   return (
     <div
-      className="hidden p-20 md:flex flex-col gap-15"
+      className="hidden p-20 lg:flex flex-col gap-15"
       style={{ backgroundColor: "rgb(255, 253, 245)" }}
     >
       <div className="flex items-center justify-center gap-10">

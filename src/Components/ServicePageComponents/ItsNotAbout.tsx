@@ -11,6 +11,7 @@ const ItsNotAbout = () => {
             className="text-3xl md:text-6xl text-center"
             style={{
               fontFamily: "Wix Madefor Text sans-serif",
+              fontWeight: "100",
               color: "rgb(255,253,245)"
             }}
           >

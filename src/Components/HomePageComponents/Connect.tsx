@@ -1,6 +1,6 @@
 import React from "react";
 import SegevPeople7 from "../../assets/SegevPhoto7.avif";
-import { FaSquareInstagram } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -22,7 +22,7 @@ const Connect = () => {
               rel="noopener noreferrer"
               className="cursor-pointer"
             >
-              <FaSquareInstagram className="w-4 h-4" />
+              <FaInstagram  className="w-4 h-4 bg-white" />
             </a>
             <div className="cursor-pointer">
             <a

@@ -26,18 +26,18 @@ const Details = () => {
   };
 
   return (
-    <div className="bg-white p-15 flex justify-center">
+    <div className="p-20 flex justify-center" style={{ backgroundColor: "rgb(255, 253, 245)" }}>
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <div className="flex flex-col md:flex-row md:gap-10 gap-5">
           <div className="flex flex-col gap-2">
-            <p className="font-light text-sm">Full Name *</p>
+            <p className="font-light text-sm text-gray-600">Full Name *</p>
             {value.FullName.length === 0 || value.FullName.trim() === ""   ? (
               <input
               value={value.FullName}
               onChange={(e) => setValue({ ...value, FullName: e.target.value })}
               type="text"
               required
-              className="border border-red-600 pr-30 p-1"
+              className="border border-red-600 pr-40 p-1"
             />
             ): (
               <input
@@ -45,13 +45,13 @@ const Details = () => {
               onChange={(e) => setValue({ ...value, FullName: e.target.value })}
               type="text"
               required
-              className="border border-b-black-600 pr-30 p-1"
+              className="border border-b-black-600 pr-40 p-1"
             />
             )}
             
           </div>
           <div className="flex flex-col gap-2">
-            <p className="font-light text-sm">Phone Number *</p>
+            <p className="font-light text-sm text-gray-600">Phone Number *</p>
             {value.PhoneNumber.length === 0 || value.PhoneNumber.trim() === ""   ? (
             <input
               value={value.PhoneNumber}
@@ -59,7 +59,7 @@ const Details = () => {
               type="tel"
               pattern="[0-9]{10}"
               required
-              className="border border-red-600 pr-30 p-1"
+              className="border border-red-600 pr-40 p-1"
             />
             ) : (
               <input
@@ -68,21 +68,21 @@ const Details = () => {
               type="tel"
               pattern="[0-9]{10}"
               required
-              className="border border-black-600 pr-30 p-1"
+              className="border border-black-600 pr-40 p-1"
             />
             )}
           </div>
         </div>
         <div className="flex flex-col md:flex-row md:gap-10 gap-5">
           <div className="flex flex-col gap-2">
-            <p className="font-light text-sm">Email *</p>
+            <p className="font-light text-sm text-gray-600">Email *</p>
             {value.Email.length === 0 || value.Email.trim() === "" ? (
             <input
               value={value.Email}
               onChange={(e) => setValue({ ...value, Email: e.target.value })}
               type="email"
               required
-              className="border border-red-600 pr-30 p-1"
+              className="border border-red-600 pr-40 p-1"
             />
             ) : (
               <input
@@ -95,11 +95,11 @@ const Details = () => {
             )}
           </div>
           <div className="flex flex-col gap-2 w-full">
-            <p className="font-light text-sm">Choose a service </p>
+            <p className="font-light text-sm text-gray-600 ">Choose a service </p>
             <select
               onChange={(e) => setValue({ ...value, Service: e.target.value })}
               value={value.Service}
-              className="border border-black p-1.5 w-full text-sm font-light"
+              className="border border-black h-full w-full text-sm font-light"
             >
               <option value="">Select...</option>
               <option value="Deep cleaning facial">Deep cleaning facial</option>
@@ -113,9 +113,10 @@ const Details = () => {
             </select>
           </div>
         </div>
+        <div className="flex flex-col gap-10">
         <div className="flex gap-5">
           <div className="flex flex-col gap-2 w-full">
-            <p className="font-light text-sm">Message </p>
+            <p className="font-light text-sm text-gray-600">Message </p>
             <textarea
               className="border border-black p-10"
               value={value.Message}
@@ -130,6 +131,7 @@ const Details = () => {
           >
             SUBMIT
           </button>
+        </div>
         </div>
       </form>
     </div>

@@ -81,8 +81,8 @@ const AsSeenOn = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex flex-col" />
-          <CarouselNext className="hidden md:flex flex-col" />
+          <CarouselPrevious className="hidden xl:flex flex-col" />
+          <CarouselNext className="hidden xl:flex flex-col" />
         </Carousel>
       </div>
     </div>

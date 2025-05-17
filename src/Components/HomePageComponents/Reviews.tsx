@@ -18,7 +18,7 @@ const Reviews = () => {
       >
         <div className="flex flex-col-reverse md:flex-row justify-between h-full w-full  gap-5">
           <div className=" flex justify-center items-end md:w-[20%] w-full">
-            <h1 className="text-5xl md:text-7xl mb-5 p-5 text-white">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl mb-5 p-5 text-white">
               REVIEWS
             </h1>
           </div>
@@ -50,7 +50,7 @@ const Reviews = () => {
           </div>
 
           <div className=" md:w-[30%] w-full text-center flex flex-col gap-3 md:gap-3">
-            <h1 className="text-5xl md:text-7xl  text-white">REVIEWS</h1>
+            <h1 className="text-3xl sm:text-5xl md:text-6xl  text-white">REVIEWS</h1>
             <h3 className="text-2xl md:text-3xl  text-white text-center">
               Don't just take
               <br /> our word for it

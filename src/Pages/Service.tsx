@@ -9,7 +9,7 @@ import Cheker from '../Components/ServicePageComponents/Cheker'
 
 const Service = () => {
   return (
-    <div style={{ backgroundColor: 'rgba(237, 235, 228, 1)' }}>
+    <div style={{ backgroundColor: 'rgba(237, 235, 228, 1)', fontFamily: "Wix Madefor Text sans-serif"}}>
       <ItsNotAbout />
       <ClinicalFacial />
       <PackagesAreComing />

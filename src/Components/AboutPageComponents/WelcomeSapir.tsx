@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 const WelcomeSapir = () => {
   return (
-    <div className='flex flex-col md:flex-row'>
-      <div>
-        <img src={SegevPhoto8} className='max-h-[705px]' alt="" />
+    <div className='flex flex-col lg:flex-row'>
+      <div className='lg:w-1/2'>
+        <img src={SegevPhoto8} className='max-h-[705px] w-full' alt="" />
       </div>
       <div className='p-0 md:p-30 mt-2 flex flex-col justify-evenly items-center text-center gap-10 md:gap-20'>
         <h1 className='text-3xl md:text-5xl' style={{ fontFamily: "Wix Madefor Text sans-serif" }}>WELCOME TO<br /> SAPIR SKINCARE</h1>

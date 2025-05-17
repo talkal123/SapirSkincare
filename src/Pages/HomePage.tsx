@@ -11,7 +11,7 @@ import Footer from '../Components/Footer.tsx'
 
 const HomePage = () => {
   return (
-    <div style={{ backgroundColor: 'rgba(237, 235, 228, 1)' }}>
+    <div style={{ backgroundColor: 'rgba(237, 235, 228, 1)',fontFamily: "Wix Madefor Text sans-serif" }}>
       <NotAboutNow />
       <Welcome />
       <Service />

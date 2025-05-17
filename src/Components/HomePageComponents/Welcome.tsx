@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import SegevPhoto3 from "../../assets/SegevPhoto3.avif";
 import { Link } from "react-router-dom";
 
-const Welcome = () => {
+const Welcome : FC = () => {
   return (
     <div className="relative p-25  grid gap-20 justify-center md:flex md:gap-50">
       <div className="min-w-[350px] md:min-w-[480px] p-3 md:p-0">

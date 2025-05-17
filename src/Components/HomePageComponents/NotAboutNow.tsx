@@ -1,10 +1,10 @@
-import React from "react";
+import { FC } from "react";
 import SegevPhoto1 from "../../assets/SegevPhoto.avif";
 import SegevPhotos2 from "../../assets/SegevPhotos2.avif";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 
-const NotAboutNow = () => {
+const NotAboutNow: FC = () => {
   return (
     <div>
       <div className="flex flex-col-reverse w-full border md:flex-row md:max-h-[700px] border-b-1 border-b-black">
@@ -14,9 +14,9 @@ const NotAboutNow = () => {
             alt=""
             className="w-full h-full opacity-15 object-cover"
           />
-          <div className="flex flex-col gap-8 absolute top-0 p-1 text-center md:top-15 md:p-20">
+          <div className="flex flex-col gap-5 md:gap-8 absolute top-15 p-1 text-center xl:top-15 xl:p-20 md:p-0">
             <h2
-              className="text-white text-3xl font-mono md:text-5xl"
+              className="text-white text-3xl font-mono xl:text-5xl md:text-2xl"
               style={{ fontFamily: "Wix Madefor Text sans-serif" }}
             >
               ITS NOT ABOUT HOW YOU LOOK, ITS <br /> ABOUT HOW YOU FEEL
@@ -34,7 +34,7 @@ const NotAboutNow = () => {
             </div>
             <div>
               <Link to="/contact">
-                <button className="bg-white cursor-pointer p-2 px-10 rounded-full hover:text-white hover:bg-blue-300 transition-colors duration-300">
+                <button className="bg-white cursor-pointer text-sm md:text-lg p-2 px-10 rounded-full hover:text-white hover:bg-blue-300 transition-colors duration-300">
                   CONNECT
                 </button>
               </Link>

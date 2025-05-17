@@ -37,10 +37,10 @@ const Cheker = () => {
   };
 
   return (
-    <div className="bg-white p-15 flex flex-col justify-center items-center">
-      <div className="p-15 flex flex-col justify-center items-center gap-20">
+    <div className="bg-white p-5 flex flex-col justify-center items-center" style={{ backgroundColor: "rgb(255, 253, 245)" }}>
+      <div className="p-15 flex flex-col justify-center items-center gap-10">
         <div>
-          <h1 className="text-5xl">Acne Ingredient Checker</h1>
+          <h1 className="text-5xl text-center md:text-left">Acne Ingredient Checker</h1>
         </div>
         <div className="flex flex-col text-center gap-2">
           <h1 className="text-2xl">Your Ingredients</h1>
@@ -57,9 +57,9 @@ const Cheker = () => {
           ></textarea>
         </div>
 
-        <div className="w-full max-h-[200px] min-h-[200px]">
+        <div className="w-full max-h-[150px] min-h-[150px]">
           {isDisplay === true ? (
-            <div className="w-full flex flex-col gap-5 max-h-[200px] min-h-[200px] overflow-y-auto overflow-x-hidden">
+            <div className="w-full flex flex-col gap-5 max-h-[150px] min-h-[150px] overflow-y-auto overflow-x-hidden">
               <h3 className="font-bold text-xl text-red-600">Oh no! Our AI Found acne-causing ingredient.</h3>
               <ol  className="list-decimal list-inside">
               {savedWords.map((word, index) => (
@@ -75,7 +75,7 @@ const Cheker = () => {
           ) : null}
         </div>
 
-        <div className="flex gap-2 justify-start w-full">
+        <div className="flex gap-2 justify-center md:justify-start w-full">
           <button
             onClick={submitBtn}
             className="p-5 rounded-full border bg-blue-500 text-white"
