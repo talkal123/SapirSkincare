@@ -1,0 +1,92 @@
+import React from "react";
+import Voyage from "../../assets/Voyage.avif";
+import AsBell from "../../assets/AsBeel.avif";
+import SegevCients1 from "../../assets/SegevClients1.avif";
+import SegevCients2 from "../../assets/SegevClients2.avif";
+import SegevCients3 from "../../assets/SegevClients3.avif";
+import SegevCients4 from "../../assets/SegevClients4.avif";
+import SegevCients5 from "../../assets/SegevClients5.avif";
+import SegevCients6 from "../../assets/SegevClients6.avif";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
+import { Card, CardContent } from "../ui/card";
+
+const AsSeenOn = () => {
+  const clientImages = [
+    SegevCients1,
+    SegevCients2,
+    SegevCients3,
+    SegevCients4,
+    SegevCients5,
+    SegevCients6,
+  ];
+
+  return (
+    <div className="p-10 flex flex-col gap-20 items-center">
+      <div className="flex flex-col gap-5 items-center justify-center">
+        <h3
+          className="font-extrabold text-4xl"
+          style={{ color: "rgb(178,176,171)" }}
+        >
+          AS SEEN ON:
+        </h3>
+        <div className="flex gap-5">
+          <img
+            src={Voyage}
+            className="max-w-[150px] md:max-w-[216px] max-h-[56px]"
+            alt=""
+          />
+          <img
+            src={AsBell}
+            className="max-w-[150px] md:max-w-[216px] max-h-[56px]"
+            alt=""
+          />
+        </div>
+      </div>
+      <div className="flex justify-center items-center">
+        <h1
+          className="text-5xl md:text-6xl"
+          style={{
+            fontFamily: "Wix Madefor Text sans-serif",
+            fontWeight: "lighter",
+          }}
+        >
+          BEFORE & AFTER
+        </h1>
+      </div>
+      <div>
+        <Carousel className="w-full  max-w-6xl">
+          <CarouselContent className="-ml-1">
+            {clientImages.map((img, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-1 md:basis-1/2 lg:basis-1/3"
+              >
+                <div className="p-1">
+                  <Card className="rounded-full aspect-square overflow-hidden">
+                    <CardContent className="flex items-center justify-center p-6">
+                      <img
+                        src={img}
+                        alt={`Before & After ${index + 1}`}
+                        className="object-cover w-full h-full hover:opacity-20 transition-opacity duration-1000"
+                      />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex flex-col" />
+          <CarouselNext className="hidden md:flex flex-col" />
+        </Carousel>
+      </div>
+    </div>
+  );
+};
+
+export default AsSeenOn;
