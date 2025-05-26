@@ -69,7 +69,7 @@ const AsSeenOn = () => {
               >
                 <div className="">
                   <Card className="rounded-full aspect-square overflow-hidden">
-                    <CardContent className="mt-0 p-0 flex items-center justify-center ">
+                    <CardContent className="p-0 flex items-center justify-center ">
                       <img
                         src={img}
                         alt={`Before & After ${index + 1}`}
