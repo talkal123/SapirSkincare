@@ -8,8 +8,24 @@ import Blog3 from "../assets/Blog3.avif";
 import { IoMdMore } from "react-icons/io";
 import { BiHeart } from "react-icons/bi";
 import { useEffect, useState } from "react";
+
+
+interface BlogPost {
+  img: string;  // או סוג אחר אם יש לך סוג של תמונה
+  date: string;
+  icon: React.ReactNode;
+  read: number;
+  title: string;
+  subtitle: string;
+  views: number;
+  comments: number;
+  likes: number;
+  heartIcon: React.ReactNode;
+}
+
+
 const Blog = () => {
-  const arr = [
+  const arr: BlogPost[] = [
         {
             img:Blog1,
             date:"Sep 25, 2023",
