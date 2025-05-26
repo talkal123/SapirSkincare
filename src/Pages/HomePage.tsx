@@ -8,6 +8,7 @@ import Connect from '../Components/HomePageComponents/Connect.tsx'
 import AsSeenOn from '../Components/HomePageComponents/AsSeenOn.tsx'
 import BottomNav from '../Components/BottomNav.tsx'
 import Footer from '../Components/Footer.tsx'
+import { Fade, Zoom, Slide } from "react-awesome-reveal";
 
 const HomePage = () => {
   return (

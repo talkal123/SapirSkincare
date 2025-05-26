@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Words from "./Words.json";
 
 const Cheker = () => {
-  const [word, setWord] = useState("");
-  const [savedWords, setSavedWords] = useState([]);
-  const [isDisplay, setIsDisplay] = useState(null);
+  const [word, setWord] = useState<string>("");
+  const [savedWords, setSavedWords] = useState<string[]>([]);
+  const [isDisplay, setIsDisplay] = useState<boolean | null>(null);
 
   console.log(savedWords);
 
@@ -38,7 +38,7 @@ const Cheker = () => {
 
   return (
     <div className="bg-white p-5 flex flex-col justify-center items-center" style={{ backgroundColor: "rgb(255, 253, 245)" }}>
-      <div className="p-15 flex flex-col justify-center items-center gap-10">
+      <div className="p-15 flex flex-col justify-center items-center gap-5">
         <div>
           <h1 className="text-5xl text-center md:text-left">Acne Ingredient Checker</h1>
         </div>
@@ -77,8 +77,9 @@ const Cheker = () => {
 
         <div className="flex gap-2 justify-center md:justify-start w-full">
           <button
+            style={{backgroundColor:"#d79a88"}}
             onClick={submitBtn}
-            className="p-5 rounded-full border bg-blue-500 text-white"
+            className="p-5 rounded-full border text-white"
           >
             SUBMIT
           </button>

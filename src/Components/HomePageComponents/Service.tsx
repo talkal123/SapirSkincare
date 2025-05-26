@@ -1,9 +1,8 @@
-import React, { FC } from 'react'
 import SegevMenu from "../../assets/SegevMenu.avif"
 import SegevPeopleOne from "../../assets/SegevPeopleOne.avif"
 import { Link } from 'react-router-dom'
 
-const Service : FC = () => {
+const Service = () => {
   return (
     <div>
     <div className='grid grid-cols-1 p-20 gap-25 justify-center items-center border-b-1 border-b-black md:flex' style={{ backgroundColor: "rgb(255, 253, 245)" ,fontFamily: "Wix Madefor Text sans-serif", fontWeight: "lighter",}}>

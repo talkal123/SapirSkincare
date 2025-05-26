@@ -1,22 +1,23 @@
-import { FC } from "react";
 import SegevPhoto1 from "../../assets/SegevPhoto.avif";
 import SegevPhotos2 from "../../assets/SegevPhotos2.avif";
-import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
+import { Fade, Zoom, Slide } from "react-awesome-reveal";
 
-const NotAboutNow: FC = () => {
+
+const NotAboutNow = () => {
   return (
-    <div>
-      <div className="flex flex-col-reverse w-full border md:flex-row md:max-h-[700px] border-b-1 border-b-black">
+    <Zoom>
+    <div className="pt-5">
+      <div className="flex flex-col-reverse w-full border md:flex-row md:max-h-[500px] border-b-1 border-b-black">
         <div className="relative md:w-1/2 ">
           <img
             src={SegevPhoto1}
             alt=""
             className="w-full h-full opacity-15 object-cover"
           />
-          <div className="flex flex-col gap-5 md:gap-8 absolute top-15 p-1 text-center xl:top-15 xl:p-20 md:p-0">
+          <div className="flex flex-col gap-5 md:gap-5 absolute top-15 p-1 text-center xl:top-0 xl:p-20 md:p-0">
             <h2
-              className="text-white text-3xl font-mono xl:text-5xl md:text-2xl"
+              className="text-white text-3xl font-mono xl:text-4xl md:text-2xl"
               style={{ fontFamily: "Wix Madefor Text sans-serif" }}
             >
               ITS NOT ABOUT HOW YOU LOOK, ITS <br /> ABOUT HOW YOU FEEL
@@ -80,6 +81,7 @@ const NotAboutNow: FC = () => {
         </div>
       </div>
     </div>
+    </Zoom>
   );
 };
 

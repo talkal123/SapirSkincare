@@ -1,32 +1,29 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
-  AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "./ui/alert-dialog";
 import { BsXLg } from "react-icons/bs";
+import SegevLogo from "../assets/NewLogo2.PNG";
+
 
 const Nav = () => {
   const location = useLocation();
 
   return (
     <div
-      className="p-8 border-b-1 border-b-black flex flex-col items-center"
+      className="p-8 border-b-1 border-b-black flex flex-col items-center "
       style={{ backgroundColor: "rgba(237, 235, 228, 1)" }}
     >
-      <div className="max-w-[1100px] flex gap-15 justify-between w-full">
-        <div>
-          <h2>
-            SAPIR SKINCARE <br /> BEVERLY HILLS
-          </h2>
+      <div className="max-w-[1100px] flex gap-15 justify-between  w-full">
+        <div className="">
+          <img src={SegevLogo} className="max-h-[50px]" alt="" />
         </div>
 
         <div className="flex md:hidden items-center">

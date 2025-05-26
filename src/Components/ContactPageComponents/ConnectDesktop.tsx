@@ -30,7 +30,7 @@ const ConnectDesktop = () => {
             </div>
           </div>
         </div>
-        <div className="p-5 flex justify-center gap-20">
+        <div className="flex justify-center gap-20 ">
           <div className="flex flex-col gap-5">
             <h3 className="text-3xl ">
               Sapir Skincare <br /> Beverly Hills
@@ -40,7 +40,7 @@ const ConnectDesktop = () => {
             </span>
           </div>
           <div className="flex flex-col gap-3">
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center mt-2">
               <a href="mailto:sapirskincarela@gmail.com" className="flex gap-2">
                 <RiMailOpenFill />
                 <span className="text-xs font-light">

@@ -1,4 +1,3 @@
-import React from "react";
 import SegevPeople7 from "../../assets/SegevPhoto7.avif";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";

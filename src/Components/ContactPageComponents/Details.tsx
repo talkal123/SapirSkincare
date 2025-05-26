@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+
+
 
 const Details = () => {
+const form = useRef<HTMLFormElement | null>(null);
+
   const [value, setValue] = useState({
     FullName: "",
     PhoneNumber: "",
@@ -9,97 +14,81 @@ const Details = () => {
     Message: "",
   });
 
-
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Form submitted!") 
-    console.log("טופס נשלח עם:", value);
+    console.log(Object.fromEntries(new FormData(form.current!)));
 
-    setValue({
-    FullName: "",
-    PhoneNumber: "",
-    Email: "",
-    Service: "",
-    Message: "",
-  });
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm("service_ldx2o9d", "template_8chc57j", form.current, "rW6lWI-oWrXpF-fYG")
+      .then(() => {
+        console.log('SUCCESS!');
+        alert("Form sent successfully!");
+        form.current!.reset()
+
+        setValue({
+          FullName: "",
+          PhoneNumber: "",
+          Email: "",
+          Service: "",
+          Message: "",
+        });
+      })
+      .catch((error) => {
+        console.log('FAILED...', error.text);
+        alert("Failed to send form.");
+      });
   };
 
   return (
     <div className="p-20 flex justify-center" style={{ backgroundColor: "rgb(255, 253, 245)" }}>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
         <div className="flex flex-col md:flex-row md:gap-10 gap-5">
           <div className="flex flex-col gap-2">
             <p className="font-light text-sm text-gray-600">Full Name *</p>
-            {value.FullName.length === 0 || value.FullName.trim() === ""   ? (
-              <input
+            <input
               value={value.FullName}
               onChange={(e) => setValue({ ...value, FullName: e.target.value })}
               type="text"
+              name="FullName"
               required
-              className="border border-red-600 pr-40 p-1"
+              className={value.FullName.trim() === "" ? "border border-red-600 pr-40 p-1" : "border border-black pr-40 p-1"}
             />
-            ): (
-              <input
-              value={value.FullName}
-              onChange={(e) => setValue({ ...value, FullName: e.target.value })}
-              type="text"
-              required
-              className="border border-b-black-600 pr-40 p-1"
-            />
-            )}
-            
           </div>
           <div className="flex flex-col gap-2">
             <p className="font-light text-sm text-gray-600">Phone Number *</p>
-            {value.PhoneNumber.length === 0 || value.PhoneNumber.trim() === ""   ? (
             <input
               value={value.PhoneNumber}
               onChange={(e) => setValue({ ...value, PhoneNumber: e.target.value })}
               type="tel"
               pattern="[0-9]{10}"
+              name="PhoneNumber"
               required
-              className="border border-red-600 pr-40 p-1"
+              className={value.PhoneNumber.trim() === "" ? "border border-red-600 pr-40 p-1" : "border border-black pr-40 p-1"}
             />
-            ) : (
-              <input
-              value={value.PhoneNumber}
-              onChange={(e) => setValue({ ...value, PhoneNumber: e.target.value })}
-              type="tel"
-              pattern="[0-9]{10}"
-              required
-              className="border border-black-600 pr-40 p-1"
-            />
-            )}
           </div>
         </div>
         <div className="flex flex-col md:flex-row md:gap-10 gap-5">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 w-full" >
             <p className="font-light text-sm text-gray-600">Email *</p>
-            {value.Email.length === 0 || value.Email.trim() === "" ? (
             <input
               value={value.Email}
               onChange={(e) => setValue({ ...value, Email: e.target.value })}
               type="email"
+              name="Email"
               required
-              className="border border-red-600 pr-40 p-1"
+              className={value.Email.trim() === "" ? "border border-red-600 pr-40 p-1" : "border border-black pr-30 p-1"}
             />
-            ) : (
-              <input
-              value={value.Email}
-              onChange={(e) => setValue({ ...value, Email: e.target.value })}
-              type="email"
-              required
-              className="border border-black pr-30 p-1"
-            />
-            )}
           </div>
           <div className="flex flex-col gap-2 w-full">
-            <p className="font-light text-sm text-gray-600 ">Choose a service </p>
+            <p className="font-light text-sm text-gray-600">Choose a service </p>
             <select
               onChange={(e) => setValue({ ...value, Service: e.target.value })}
               value={value.Service}
-              className="border border-black h-full w-full text-sm font-light"
+              name="Service"
+              className="border border-black min-h-[33px] w-full text-sm font-light"
             >
               <option value="">Select...</option>
               <option value="Deep cleaning facial">Deep cleaning facial</option>
@@ -114,24 +103,25 @@ const Details = () => {
           </div>
         </div>
         <div className="flex flex-col gap-10">
-        <div className="flex gap-5">
-          <div className="flex flex-col gap-2 w-full">
-            <p className="font-light text-sm text-gray-600">Message </p>
-            <textarea
-              className="border border-black p-10"
-              value={value.Message}
-              onChange={(e) => setValue({ ...value, Message: e.target.value })}
-            />
+          <div className="flex gap-5">
+            <div className="flex flex-col gap-2 w-full">
+              <p className="font-light text-sm text-gray-600">Message </p>
+              <textarea
+                className="border border-black p-10"
+                value={value.Message}
+                onChange={(e) => setValue({ ...value, Message: e.target.value })}
+                name="Message"
+              />
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col justify-center items-center">
-          <button
-            type="submit"
-            className="bg-[#EDEBE4] p-1 pr-10 pl-10 cursor-pointer text-xs font-extralight border-1 border-black hover:bg-black duration-300 hover:text-white"
-          >
-            SUBMIT
-          </button>
-        </div>
+          <div className="flex flex-col justify-center items-center">
+            <button
+              type="submit"
+              className="bg-[#EDEBE4] p-1 pr-10 pl-10 cursor-pointer text-xs font-light border-1 border-black hover:bg-black duration-300 hover:text-white"
+            >
+              SUBMIT
+            </button>
+          </div>
         </div>
       </form>
     </div>
@@ -139,7 +129,6 @@ const Details = () => {
 };
 
 export default Details;
-
 
 
 
