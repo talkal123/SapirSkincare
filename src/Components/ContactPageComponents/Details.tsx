@@ -16,7 +16,7 @@ const form = useRef<HTMLFormElement | null>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(Object.fromEntries(new FormData(form.current!)));
+    //  console.log(Object.fromEntries(new FormData(form.current!)));
 
 
     if (!form.current) return;

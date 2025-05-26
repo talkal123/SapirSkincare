@@ -10,7 +10,7 @@ import {
   AlertDialogTrigger,
 } from "./ui/alert-dialog";
 import { BsXLg } from "react-icons/bs";
-import SegevLogo from "../assets/NewLogo2.PNG";
+import SegevLogo from "../assets/NewLogo2.png";
 
 
 const Nav = () => {
