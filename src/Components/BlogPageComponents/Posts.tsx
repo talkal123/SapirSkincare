@@ -1,12 +1,24 @@
 import React from 'react'
 
+export interface BlogPost {
+  img: string;
+  date: string;
+  icon: React.ReactNode;
+  read: number;
+  title: string;
+  subtitle: string;
+  views: number;
+  comments: number;
+  likes: number;
+  heartIcon: React.ReactNode;
+}
 
 const Posts = ({arr}:any) => {
 
   return (
     <div className='p-20 flex flex-col items-center' style={{ backgroundColor: "rgb(255, 253, 245)" }}>
       <div className='flex flex-col gap-5'>
-        {arr.map((item ,index) => {
+        {arr.map((item: BlogPost, index: number) => {
             return(
             <div key={index} className='border border-black flex w-full xl:min-w-[800px] xl:max-w-[800px] '>
                 <div className=''>

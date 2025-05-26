@@ -65,15 +65,15 @@ const AsSeenOn = () => {
             {clientImages.map((img, index) => (
               <CarouselItem
                 key={index}
-                className="pl-1 md:basis-1/2 lg:basis-1/3"
+                className=" md:basis-1/ lg:basis-1/3"
               >
-                <div className="p-1">
+                <div className="">
                   <Card className="rounded-full aspect-square overflow-hidden">
-                    <CardContent className="flex items-center justify-center p-6">
+                    <CardContent className="mt-0 p-0 flex items-center justify-center ">
                       <img
                         src={img}
                         alt={`Before & After ${index + 1}`}
-                        className="object-cover w-full h-full hover:opacity-20 transition-opacity duration-1000"
+                        className="object-fill hover:opacity-20 transition-opacity duration-1000"
                       />
                     </CardContent>
                   </Card>
