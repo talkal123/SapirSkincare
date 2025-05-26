@@ -1,8 +1,8 @@
-import Connect from '../Components/ContactPageComponents/Connect'
-import BottomNav from '../Components/BottomNav'
-import Footer from '../Components/Footer'
-import ConnectDesktop from '../Components/ContactPageComponents/ConnectDesktop'
-import Details from '../Components/ContactPageComponents/Details'
+import Connect from '../components_test/ContactPageComponents/Connect'
+import BottomNav from '../components_test/BottomNav'
+import Footer from '../components_test/Footer'
+import ConnectDesktop from '../components_test/ContactPageComponents/ConnectDesktop'
+import Details from '../components_test/ContactPageComponents/Details'
 
 const Contact = () => {
   return (

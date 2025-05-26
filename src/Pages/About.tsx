@@ -1,10 +1,10 @@
-import Connect from '../Components/AboutPageComponents/Connect'
-import OurGoals from '../Components/AboutPageComponents/OurGoals'
-import TheTeam from '../Components/AboutPageComponents/TheTeam'
-import WelcomeSapir from '../Components/AboutPageComponents/WelcomeSapir'
-import WhoWeAre from '../Components/AboutPageComponents/WhoWeAre'
-import BottomNav from '../Components/BottomNav'
-import Footer from '../Components/Footer'
+import Connect from '../components_test/AboutPageComponents/Connect'
+import OurGoals from '../components_test/AboutPageComponents/OurGoals'
+import TheTeam from '../components_test/AboutPageComponents/TheTeam'
+import WelcomeSapir from '../components_test/AboutPageComponents/WelcomeSapir'
+import WhoWeAre from '../components_test/AboutPageComponents/WhoWeAre'
+import BottomNav from '../components_test/BottomNav'
+import Footer from '../components_test/Footer'
 
 const About = () => {
   return (
