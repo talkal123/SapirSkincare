@@ -1,4 +1,3 @@
-import React from 'react'
 import NotAboutNow from '../Components/HomePageComponents/NotAboutNow.tsx'
 import Welcome from '../Components/HomePageComponents/Welcome.tsx'
 import Service from '../Components/HomePageComponents/Service.tsx'
@@ -8,7 +7,6 @@ import Connect from '../Components/HomePageComponents/Connect.tsx'
 import AsSeenOn from '../Components/HomePageComponents/AsSeenOn.tsx'
 import BottomNav from '../Components/BottomNav.tsx'
 import Footer from '../Components/Footer.tsx'
-import { Fade, Zoom, Slide } from "react-awesome-reveal";
 
 const HomePage = () => {
   return (
