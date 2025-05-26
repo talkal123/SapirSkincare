@@ -8,7 +8,6 @@ import Blog3 from "../assets/Blog3.avif";
 import { IoMdMore } from "react-icons/io";
 import { BiHeart } from "react-icons/bi";
 import { useEffect, useState } from "react";
-import Filters from "../Components/BlogPageComponents/Filters";
 const Blog = () => {
   const arr = [
         {

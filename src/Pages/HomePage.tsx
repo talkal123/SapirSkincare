@@ -1,12 +1,12 @@
-import NotAboutNow from '../Components/HomePageComponents/NotAboutNow.tsx'
-import Welcome from '../Components/HomePageComponents/Welcome.tsx'
-import Service from '../Components/HomePageComponents/Service.tsx'
-import Reviews from '../Components/HomePageComponents/Reviews.tsx'
-import WhyYou from '../Components/HomePageComponents/WhyYou.tsx'
-import Connect from '../Components/HomePageComponents/Connect.tsx'
-import AsSeenOn from '../Components/HomePageComponents/AsSeenOn.tsx'
-import BottomNav from '../Components/BottomNav.tsx'
-import Footer from '../Components/Footer.tsx'
+import NotAboutNow from '../Components/HomePageComponents/NotAboutNow'
+import Welcome from '../Components/HomePageComponents/Welcome'
+import Service from '../Components/HomePageComponents/Service'
+import Reviews from '../Components/HomePageComponents/Reviews'
+import WhyYou from '../Components/HomePageComponents/WhyYou'
+import Connect from '../Components/HomePageComponents/Connect'
+import AsSeenOn from '../Components/HomePageComponents/AsSeenOn'
+import BottomNav from '../Components/BottomNav'
+import Footer from '../Components/Footer'
 
 const HomePage = () => {
   return (
