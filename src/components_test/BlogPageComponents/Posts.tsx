@@ -16,15 +16,15 @@ export interface BlogPost {
 const Posts = ({arr}:any) => {
 
   return (
-    <div className='p-20 flex flex-col items-center' style={{ backgroundColor: "rgb(255, 253, 245)" }}>
+    <div className='pt-5 pb-5 md:p-20 flex flex-col items-center' style={{ backgroundColor: "rgb(255, 253, 245)" }}>
       <div className='flex flex-col gap-5'>
         {arr.map((item: BlogPost, index: number) => {
             return(
-            <div key={index} className='border border-black flex w-full xl:min-w-[800px] xl:max-w-[800px] '>
+            <div key={index} className='border max-h-[400px] border-black flex w-full xl:min-w-[800px] xl:max-w-[800px] '>
                 <div className=''>
                     <img className='max-w-[200px] h-full xl:max-w-[400px]' src={item.img} alt="" />
                 </div>
-                <div className='p-5 flex flex-col justify-between w-full border'>
+                <div className='p-1 md:p-5 flex flex-col justify-between w-full border'>
                     <div className='flex items-center justify-between gap-5'>
                         <div className='flex items-center justify-center gap-3'>
                             <span className='font-light text-xs'>{item.date}</span>

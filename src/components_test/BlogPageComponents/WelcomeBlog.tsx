@@ -34,7 +34,7 @@ const WelcomeBlog = () => {
           </div>
         </div>
     </div>
-    <div style={{ backgroundColor: 'rgba(237, 235, 228, 1)' }} className=" items-center  text-center flex flex-col md:p-5 max-h-[200px] border-1 border-black">
+    <div style={{ backgroundColor: 'rgba(237, 235, 228, 1)' }} className="hidden items-center  text-center md:flex flex-col md:p-5 max-h-[200px] border-1 border-black">
   <div className="flex flex-col gap-8 text-center items-center justify-center px-4">
     <div>
       <h1 className="text-3xl font-semibold">Welcome to my blog!</h1>

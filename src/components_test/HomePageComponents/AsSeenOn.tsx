@@ -27,7 +27,7 @@ const AsSeenOn = () => {
   ];
 
   return (
-    <div className="p-10 flex flex-col gap-20 items-center">
+    <div className="p-5 md:p-10 flex flex-col gap-20 items-center">
       <div className="flex flex-col gap-5 items-center justify-center">
         <h3
           className="font-extrabold text-4xl"
@@ -50,7 +50,7 @@ const AsSeenOn = () => {
       </div>
       <div className="flex justify-center items-center">
         <h1
-          className="text-5xl md:text-6xl"
+          className="text-5xl text- md:text-left md:text-6xl"
           style={{
             fontFamily: "Wix Madefor Text sans-serif",
             fontWeight: "lighter",

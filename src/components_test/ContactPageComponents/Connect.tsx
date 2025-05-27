@@ -41,9 +41,14 @@ const Connect = () => {
                 <div>
                     <span className='text-md font-light'>Have a question? I'd love to hear from<br /> you!</span>
                 </div>
-                <div className='flex flex-col'>
-                    <div className='flex gap-2 items-center'><RiMailOpenFill /><span className='text-md font-light'>sapirskincarela@gmail.com</span></div>
-                    <div className='flex gap-2 items-center'><FaPhoneAlt /><span className='text-md font-light'>(818) 266-2387i</span></div>
+                <div className='flex flex-col gap-1'>
+                    <a href="mailto:sapirskincarela@gmail.com" className="flex gap-2">
+                <RiMailOpenFill />
+                <span className="text-xs font-light">
+                  sapirskincarela@gmail.com
+                </span>
+                </a>
+                    <div className='flex gap-2 items-center'><FaPhoneAlt /><span className='text-md font-light'>+15053524978</span></div>
                 </div>
             </div>
         </div>
