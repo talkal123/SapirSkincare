@@ -16,15 +16,15 @@ export interface BlogPost {
 const Posts = ({arr}:any) => {
 
   return (
-    <div className='pt-5 pb-5 md:p-20 flex flex-col items-center' style={{ backgroundColor: "rgb(255, 253, 245)" }}>
-      <div className='flex flex-col gap-5'>
+    <div className='pt-5 pb-5 md:p-20 flex flex-col items-center ' style={{ backgroundColor: "rgb(255, 253, 245)" }}>
+      <div className='flex flex-col gap-5 border-black p-2'>
         {arr.map((item: BlogPost, index: number) => {
             return(
-            <div key={index} className='border max-h-[400px] border-black flex w-full xl:min-w-[800px] xl:max-w-[800px] '>
+            <div key={index} className=' border-r-0 border-l-0 border-t-0 border-b-1 border-gray-300 md:border max-h-[200px] md:max-h-[500px] md:border-black flex w-full xl:min-w-[800px] xl:max-w-[800px] '>
                 <div className=''>
                     <img className='max-w-[200px] h-full xl:max-w-[400px]' src={item.img} alt="" />
                 </div>
-                <div className='p-1 md:p-5 flex flex-col justify-between w-full border'>
+                <div className='p-2 md:p-5 flex flex-col justify-between w-full'>
                     <div className='flex items-center justify-between gap-5'>
                         <div className='flex items-center justify-center gap-3'>
                             <span className='font-light text-xs'>{item.date}</span>
@@ -36,8 +36,8 @@ const Posts = ({arr}:any) => {
                         </div>
                     </div>
                     <div className='flex flex-col gap-5'>
-                        <h1 className='font-semibold'>{item.title}</h1>
-                        <p className='font-light text-xs text-gray-500'>{item.subtitle}</p>
+                        <h1 className='font-semibold text-sm md:text-md'>{item.title}</h1>
+                        <p className='hidden md:flex font-light text-xs text-gray-500'>{item.subtitle}</p>
                     </div>
                     <div className='border-t-1 flex gap-2 p-2 justify-between'>
                         <div className='flex  gap-2'>
